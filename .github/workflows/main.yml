@@ -1,0 +1,13 @@
+name: Deploy App
+
+on:
+  workflow_dispatch:  # This allows manual triggering via API or GitHub UI
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Print Message
+        run: echo "Deployment triggered!"
